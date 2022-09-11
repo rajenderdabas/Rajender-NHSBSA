@@ -1,0 +1,45 @@
+Feature: Verify NHSBSA Eligibility Checker Flow
+
+  @VerifyNHSBSAEligibilityCheckerFlow_Positive
+  Scenario Outline: I a person from "<Country>", I want to check my eligibility for NHSBSA [90m# nhsBsa_flow.feature:4[0m
+    [36mGiven [0m[36mI am a person from "<Country>"[0m
+    [36mWhen [0m[36mI check my eligibility for NHSBSA[0m
+    [36mThen [0m[36mI should see the NHSBSA eligibility checker as "<Is_Eligible>"[0m
+
+    Examples: 
+[34mActual Result :: true, Expected Result :: true[0m
+
+  @VerifyNHSBSAEligibilityCheckerFlow_Positive
+  Scenario Outline: I a person from "Wales", I want to check my eligibility for NHSBSA [90m# nhsBsa_flow.feature:13[0m
+    [32mGiven [0m[32mI am a person from "[0m[32m[1mWales[0m[32m"[0m                                                   [90m# NhsBsaSteps.i_am_a_person_from(String)[0m
+    [32mWhen [0m[32mI check my eligibility for NHSBSA[0m                                             [90m# NhsBsaSteps.i_check_my_eligibility_for_nhsbsa(DataTable)[0m
+    [32mThen [0m[32mI should see the NHSBSA eligibility checker as "[0m[32m[1mTrue[0m[32m"[0m                         [90m# NhsBsaSteps.i_should_see_the_nhsbsa_eligibility_checker(String)[0m
+[34mActual Result :: true, Expected Result :: true[0m
+
+  @VerifyNHSBSAEligibilityCheckerFlow_Positive
+  Scenario Outline: I a person from "Wales", I want to check my eligibility for NHSBSA [90m# nhsBsa_flow.feature:14[0m
+    [32mGiven [0m[32mI am a person from "[0m[32m[1mWales[0m[32m"[0m                                                   [90m# NhsBsaSteps.i_am_a_person_from(String)[0m
+    [32mWhen [0m[32mI check my eligibility for NHSBSA[0m                                             [90m# NhsBsaSteps.i_check_my_eligibility_for_nhsbsa(DataTable)[0m
+    [32mThen [0m[32mI should see the NHSBSA eligibility checker as "[0m[32m[1mTrue[0m[32m"[0m                         [90m# NhsBsaSteps.i_should_see_the_nhsbsa_eligibility_checker(String)[0m
+[34mActual Result :: false, Expected Result :: true[0m
+
+  @VerifyNHSBSAEligibilityCheckerFlow_Positive
+  Scenario Outline: I a person from "Wales", I want to check my eligibility for NHSBSA [90m# nhsBsa_flow.feature:15[0m
+    [32mGiven [0m[32mI am a person from "[0m[32m[1mWales[0m[32m"[0m                                                   [90m# NhsBsaSteps.i_am_a_person_from(String)[0m
+    [32mWhen [0m[32mI check my eligibility for NHSBSA[0m                                             [90m# NhsBsaSteps.i_check_my_eligibility_for_nhsbsa(DataTable)[0m
+    [31mThen [0m[31mI should see the NHSBSA eligibility checker as "[0m[31m[1mTrue[0m[31m"[0m                         [90m# NhsBsaSteps.i_should_see_the_nhsbsa_eligibility_checker(String)[0m
+      [31mjava.lang.AssertionError: expected:<true> but was:<false>
+      	at org.junit.Assert.fail(Assert.java:88)
+      	at org.junit.Assert.failNotEquals(Assert.java:834)
+      	at org.junit.Assert.assertEquals(Assert.java:118)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.test.stepdefs.NhsBsaSteps.i_should_see_the_nhsbsa_eligibility_checker(NhsBsaSteps.java:61)
+      	at ✽.Then I should see the NHSBSA eligibility checker as "True"(nhsBsa_flow.feature:9)
+      [0m
+[34mActual Result :: true, Expected Result :: true[0m
+
+  @VerifyNHSBSAEligibilityCheckerFlow_Positive
+  Scenario Outline: I a person from "Wales", I want to check my eligibility for NHSBSA [90m# nhsBsa_flow.feature:16[0m
+    [32mGiven [0m[32mI am a person from "[0m[32m[1mWales[0m[32m"[0m                                                   [90m# NhsBsaSteps.i_am_a_person_from(String)[0m
+    [32mWhen [0m[32mI check my eligibility for NHSBSA[0m                                             [90m# NhsBsaSteps.i_check_my_eligibility_for_nhsbsa(DataTable)[0m
+    [32mThen [0m[32mI should see the NHSBSA eligibility checker as "[0m[32m[1mTrue[0m[32m"[0m                         [90m# NhsBsaSteps.i_should_see_the_nhsbsa_eligibility_checker(String)[0m
